@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="social">
+        <a href="/" class="social-icon">
+          <i class="uil uil-github"></i>
+        </a>
+        <a href="/" class="social-icon">
+          <i class="uil uil-linkedin"></i>
+        </a>
+        <a href="/" class="social-icon">
+          <i class="uil uil-telegram"></i>
+        </a>
+      </div>
+      <div class="picture"></div>
+      <form action="/" id="form">
+        <h1>Sign Up</h1>
+
+        <div class="input--control">
+          <label for="username">Name</label>
+          <input type="text" name="username" id="username">
+          <div class="error"></div>
+        </div>
+
+        <div class="input--control">
+          <label for="userSurname">Surname</label>
+          <input type="text" name="userSurname" id="userSurname">
+          <div class="error"></div>
+        </div>
+
+        <div class="input--control">
+          <label for="birhtDate">Date of Birth</label>
+          <input type="date" name="birhtDate" id="birhtDate">
+          <div class="error"></div>
+        </div>
+
+        <div class="input--control">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email">
+          <div class="error"></div>
+        </div>
+
+        <div class="input--control">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+          <div class="error"></div>
+        </div>
+
+        <div class="input--control">
+          <label for="passConfirm">Confirm password</label>
+          <input type="password" name="passConfirm" id="passConfirm">
+          <div class="error"></div>
+        </div>
+
+        <button type="submit">Join</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script defer src="/script.js"></script>
+</body>
+
+</html>
