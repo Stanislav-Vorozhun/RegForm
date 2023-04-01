@@ -38,7 +38,7 @@ body {
 }
 
 .picture {
-  background: url(./assets/login2.jpg);
+  background: url(../RegForm/assets/login2.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
