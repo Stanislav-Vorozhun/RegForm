@@ -12,16 +12,24 @@ const today = new Date().toISOString().split("T")[0];
 
 birhtDate.setAttribute('max', today);
 
+// Regular expressions
+
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{8,}$/;
+
+
+// Array of form elements
 
 const fields = [
   { id: 'username', validate: value => value.trim().length < 25 && value.trim().length >= 2 && value.trim().length !== 0, error: 'Name is required' },
   { id: 'userSurname', validate: value => value.trim().length < 25 && value.trim().length >= 2 && value.trim().length !== 0, error: 'Surname is required' },
   { id: 'birhtDate', validate: value => value !== '', error: 'Birth date is required' },
   { id: 'email', validate: value => emailRegex.test(value), error: 'Provide a valid email address' },
-  { id: 'password', validate: value => passwordRegex.test(value), error: 'Password must be at least 8 characters long and contain at least one uppercase letter, one number, and one special character' },
+  { id: 'password', validate: value => passwordRegex.test(value), error: 'Password must be at least 8 characters long,contain uppercase letter, one number, one special character' },
   { id: 'passConfirm', validate: value => value.trim() === password.value.trim(), error: 'Password doesn\'t match' }];
+
+
+// Validation check
 
 const validateField = ({ id, validate, error }) => {
   const element = form.elements[id];
@@ -33,6 +41,8 @@ const validateField = ({ id, validate, error }) => {
   element.parentElement.querySelector('.error').innerText = message;
   return isValid;
 };
+
+// Сhecking and sending form data to the server
 
 const validateForm = () => fields.every(validateField);
 
